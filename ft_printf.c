@@ -60,9 +60,7 @@ int	ft_printf(const char *format, ...)
 	while (format[cnt])
 	{
 		if (format[cnt] == '%')
-		{
 			byte = next_check(format[++cnt], &arg);
-		}
 		else
 			byte = write(1, &format[cnt], 1);
 		if (byte == -1)

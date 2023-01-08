@@ -16,6 +16,8 @@ char	*str_upper(char *str)
 {
 	size_t	cnt;
 
+	if (!str)
+		return (NULL);
 	cnt = 0;
 	while (str[cnt])
 	{

@@ -45,17 +45,18 @@ int	ft_print_pointer(uintptr_t dst)
 	int		len;
 	char	*tmp;
 
+	tmp = ft_ultoa(dst);
+	if (!tmp)
+		return (-1);
 	len = 0;
 	byte = ft_print_str("0x");
-	len += byte;
 	if (byte == -1)
 		return (-1);
-	tmp = ft_ultoa(dst);
+	len += byte;
 	byte = ft_print_str(tmp);
 	free(tmp);
-	tmp = NULL;
-	len += byte;
 	if (byte == -1)
 		return (-1);
+	len += byte;
 	return (len);
 }
